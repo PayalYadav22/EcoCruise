@@ -2,125 +2,241 @@
   #style.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+:root {
+  /* colors */
+  --rich-black-fogra-29: hsl(230, 14%, 9%);
+  --gray-x-11-gray: hsl(0, 0%, 73%);
+  --oxford-blue_a15: hsla(216, 65%, 10%, 0.15);
+  --yellow-green: hsl(86, 54%, 51%);
+  --smoky-black: hsl(0, 0%, 6%);
+  --black-coral: hsl(231, 6%, 40%);
+  --light-gray: hsl(0, 0%, 80%);
+  --cultured: hsl(240, 10%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --white_a30: hsla(0, 0%, 100%, 0.3);
+  --black: hsl(0, 0%, 0%);
 
+  /* typography */
+  --ff-quicksand: "Quicksand", sans-serif;
+  --ff-nunito_sans: "Nunito Sans", sans-serif;
 
+  --fs-1: 5.5rem;
+  --fs-2: 3.6rem;
+  --fs-3: 3.2rem;
+  --fs-4: 2.6rem;
+  --fs-5: 2.4rem;
+  --fs-6: 2.2rem;
+  --fs-7: 2rem;
+  --fs-8: 1.8rem;
+  --fs-9: 1.5rem;
+  --fs-10: 1.4rem;
+  --fs-11: 1.3rem;
 
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  /* spacing */
+  --section-padding: 40px;
+
+  /* shadow */
+  --shadow: 0 15px 40px 0 hsla(224, 24%, 47%, 0.1);
+
+  /* border radius */
+  --radius-circle: 50%;
+  --radius-60: 60px;
+  --radius-50: 50px;
+  --radius-30: 30px;
+  --radius-20: 20px;
+  --radius-5: 5px;
+
+  /* transition */
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
 
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+li {
+  list-style: none;
+}
 
+a,
+img,
+span,
+button,
+ion-icon {
+  display: block;
+}
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button {
+  background-color: none;
+  border: none;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  font-family: var(--ff-nunito_sans);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black-coral);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 300vh;
+}
+
+:focus-visible {
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(0, 0%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 70%);
+}
 
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
 
-
-
-
-
 /*-----------------------------------*\
   #PRELOADER
 \*-----------------------------------*/
+.preload-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  transition: var(--transition-1);
+  display: none;
+}
 
+.preload-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate360 0.5s linear infinite;
+}
 
+@keyframes rotate360 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
 
+.preload-container.loaded {
+  visibility: hidden;
+  opacity: 0;
+}
 
+.preload-container.loaded .preload-circle {
+  animation-iteration-count: 1;
+}
 
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
 
-
-
-
-
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
-
-
-
-
 
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
 
-
-
-
-
 /*-----------------------------------*\
   #STATS
 \*-----------------------------------*/
-
-
-
-
 
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
 
-
-
-
-
 /*-----------------------------------*\
   #CTA
 \*-----------------------------------*/
-
-
-
-
 
 /*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
 
-
-
-
-
 /*-----------------------------------*\
   #CONTACT
 \*-----------------------------------*/
-
-
-
-
 
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
-
-
-
-
 /*-----------------------------------*\
   #BACK TO TOP
 \*-----------------------------------*/
-
-
-
-
 
 /*-----------------------------------*\
   #MEDIA QUERIES
