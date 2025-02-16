@@ -120,6 +120,7 @@ html {
   font-family: var(--ff-nunito_sans);
   font-size: 10px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
